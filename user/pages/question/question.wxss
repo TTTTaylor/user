@@ -1,0 +1,14 @@
+.title {
+  font-size: 20px;
+  
+  margin-left: 157.6px;
+  color: rgb(103, 243, 91);
+  margin-top: 100px;
+
+}
+.title2{
+  font-size: 20px;
+  
+  margin-top: 10px;
+
+}

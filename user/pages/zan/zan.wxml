@@ -1,0 +1,9 @@
+
+  <cu-custom bgColor="bg-gradual-red" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">赞赏与支持</view>
+  </cu-custom>
+<view class='title'>
+<text>您的支持就是我们最大的动力٩(๑❛ᴗ❛๑)۶！</text>
+</view>
+<image class="image" src="../../image/1.jpg"></image>

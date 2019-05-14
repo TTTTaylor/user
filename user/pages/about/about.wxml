@@ -1,0 +1,10 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">关于</view></cu-custom>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于学习题库</view>
+  <view class='text-content'>
+    <view>Hi！各位同学你们好~欢迎使用本学习题库！</view>
+    <view class='margin-top-sm'>该题库小程序是我们nobug团队一起开发的一款实用的题库。这个题库小程序目前有四科题目，分别是高数，离散数学，c语言，Java（更多的科目目前正在加入>>）。</view>
+    <view class='margin-top-sm'>本题库不收取任何费用，如果这个小程序有帮到你，或者你觉得很赞，请给我们给予反馈给我们一个肯定，我们会继续努力增加更多的科目，更多的题目！٩(๑❛ᴗ❛๑)۶</view>
+    <view class='margin-top-sm'>更多功能和题目敬请期待！</view>
+  </view>
+</view>

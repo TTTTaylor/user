@@ -1,0 +1,42 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">设置</view>
+  </cu-custom>
+  <view class="action margin-top">
+      答题偏好
+    </view>
+    <view class="cu-bar margin-top bg-white">
+  <view class="action">
+    <text class="icon-title text-blue"></text>自动跳转下一题
+  </view>
+  <view class="action"> 
+    <switch class="sm" bindchange="SetShadow"></switch>
+  </view>
+</view>
+<view class="cu-bar  bg-white">
+  <view class="action">
+    <text class="icon-title text-blue"></text>错题自动收藏
+  </view>
+  <view class="action"> 
+    <switch class="sm" bindchange="SetShadow"></switch>
+  </view>
+</view>
+<view class="action margin-top">
+      系统通知
+    </view>
+     <view class="cu-bar margin-top bg-white">
+  <view class="action">
+    <text class="icon-title text-blue"></text>答题提醒
+  </view>
+  <view class="action"> 
+    <switch class="sm" bindchange="SetShadow"></switch>
+  </view>
+</view>
+ <view class="cu-bar  bg-white">
+  <view class="action">
+    <text class="icon-title text-blue"></text>题库更新
+  </view>
+  <view class="action"> 
+    <switch class="sm" bindchange="SetShadow"></switch>
+  </view>
+</view>

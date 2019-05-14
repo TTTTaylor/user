@@ -1,0 +1,15 @@
+.title {
+  font-size: 20px;
+  
+  margin-left: 95rpx;
+  color: rgb(230, 66, 107);
+  margin-top: 100px;
+
+}
+.image{
+  width: 375.2px;
+  height: 375.2px;
+  
+  margin-top: 25px;
+  
+}

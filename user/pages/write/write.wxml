@@ -1,0 +1,34 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">意见反馈</view>
+  </cu-custom>
+  <form>
+  <view class="action margin-top">
+      问题描述
+    </view>
+  <view class="cu-form-group margin-top">
+    <textarea data-placeholder="请输入问题描述" maxlength="-1" disabled="{{modalName!=null}}" placeholder-class="placeholder" class="{{textareaAValue?'value':''}}" bindinput="textareaAInput"></textarea>
+  </view>
+<!--上传照片-->
+  <view class="cu-bar bg-white">
+    <view class="action">
+      上传截图（可选）
+    </view>
+    <view class="action">
+      {{imgList.length}}/4
+    </view>
+  </view>
+  <view class="cu-form-group">
+    <view class="grid col-4 grid-square flex-sub">
+      <view class="padding-xs bg-img" style="background-image:url({{imgList[index]}})" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+        <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+          <text class="icon-close"></text>
+        </view>
+      </view>
+      <view class="padding-xs solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+        <text class="icon-cameraadd"></text>
+      </view>
+    </view>
+  </view>
+  </form>
+  <button class="margin-top" type='primary' bindtap='show'>提交</button>

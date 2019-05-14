@@ -1,0 +1,80 @@
+<!--pages/user/user.wxml-->
+<!--index.wxml-->
+<cu-custom bgColor="bg-gradual-blue" >
+  <view slot="content">我</view>
+</cu-custom>
+
+<view class="container">
+  <view class="userinfo">
+    <button class="cu-btn round bg-grey lg margin-top-xl"wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+
+  
+  <view class="cu-list grid col-{{gridCol}} {{gridBorder?'':'no-border'}}">
+    <view class="cu-item" wx:for="{{iconList}}" wx:key wx:if="{{index<gridCol*2}}">
+      <view class="icon-{{item.icon}} text-{{item.color}}">
+        <view class="cu-tag badge" wx:if="{{item.badge!=0}}">
+          <block wx:if="{{item.badge!=1}}">{{item.badge>99?"99+":item.badge}}</block>
+        </view>
+      </view>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+
+
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+ 
+  <view class="cu-item arrow">
+    <button class='cu-btn content' open-type bindtap='setting'>
+      <text class=' icon-settings text-grey'></text>
+      <text class='text-grey'>设置</text>
+    </button>
+  </view>
+  
+  <view class="cu-item arrow">
+    <button class='cu-btn content'  bindtap="showQrcode">
+      <text class='icon-appreciatefill text-red'></text>
+      <text class='text-grey' >赞赏支持</text>
+    </button>
+  </view>
+
+  <view class="cu-item arrow">
+    <button class='cu-btn content' open-type bindtap='write'>
+      <text class='icon-writefill text-cyan'></text>
+      <text class='text-grey'>意见反馈</text>
+    </button>
+  </view>
+
+    <view class="cu-item arrow">
+    <button class='cu-btn content' open-type bindtap='about'>
+      <text class=' icon-more text-blue'></text>
+      <text class='text-grey'>关于题库</text>
+    </button>
+  </view>
+
+ 
+
+    
+  <view class="cu-item arrow">
+    <button class='cu-btn content' open-type bindtap='question'>
+      <text class=' icon-question text-red'></text>
+      <text class='text-grey'>帮助</text>
+    </button>
+    </view>
+
+     <view class="cu-item arrow ">
+    <button class='cu-btn content' open-type bindtap='share'>
+      <text class=' icon-share text-blue'></text>
+      <text class='text-grey'>分享给好友一起学习</text>
+    </button>
+    </view>
+</view>
+</view>
+
